@@ -1,3 +1,25 @@
+# Kubernetes config
+
+## Environment
+
+- PORT_EXPOSED=55555
+- ADDR_TO=localhost
+- PORT_TO=3000
+- ADDR_TUNNEL=wallet.hostname.or.ip
+- ADDR_TUNNEL_SSH_PORT=7022
+- REMOTE_USER=root
+
+Expose `PORT_EXPOSED` in the workload and create a service (i.e. `wallet.tunnel`) to access it.
+
+## Secrets
+
+- `/root/.ssh/id_rsa`: private key authorized in wallet server
+- `/root/.ssh/known_hosts`: values retrieved for the wallet using `ssh-keyscan -p $ADDR_TUNNEL_SSH_PORT -H $ARRD_TUNNEL`
+
+---
+
+# Original MD
+
 # ssh-tunnel
 Local port forwarding with SSH.
 Access a service on private.server.tld:port through an ssh connection between your local/docker server and public.server.tld.
