@@ -14,7 +14,7 @@ Expose `PORT_EXPOSED` in the workload and create a service (i.e. `wallet.tunnel`
 ## Secrets
 
 - `/root/.ssh/id_rsa`: private key authorized in wallet server
-- `/root/.ssh/known_hosts`: values retrieved for the wallet using `ssh-keyscan -p $ADDR_TUNNEL_SSH_PORT -H $ARRD_TUNNEL`
+- `/root/.ssh/known_hosts`: values retrieved for the wallet using `ssh-keyscan -p $ADDR_TUNNEL_SSH_PORT -H $ADDR_TUNNEL`
 
 ---
 
