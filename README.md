@@ -8,8 +8,11 @@
 - ADDR_TUNNEL=wallet.hostname.or.ip
 - ADDR_TUNNEL_SSH_PORT=7022
 - REMOTE_USER=root
+- PROXY_MODE=false
 
 Expose `PORT_EXPOSED` in the workload and create a service (i.e. `wallet.tunnel`) to access it.
+
+if `PROXY_MODE` is `true`, the tunnel image will create a socks5 proxy in the exposed port. `ADDR_TO` and `PORT_TO` are ignored in this mode.
 
 ## Secrets
 
